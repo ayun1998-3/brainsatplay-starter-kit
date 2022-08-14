@@ -15,6 +15,9 @@ import sine from './plugins/sine/index.js';
 import timeseries from './plugins/timeseries/index.js';
 import webrtc from './plugins/webrtc/index.js';
 
+import graph from './index.wasl.json' assert {type: 'json'};
+import pkg from './package.json' assert {type: 'json'};
+
 // Step 2: Export Application API + Info
 export {
     circles,
@@ -25,4 +28,8 @@ export {
     sine ,
     timeseries,
     webrtc,
+    ['.brainsatplay']: {
+        package: pkg,
+        graph
+    }
 }
